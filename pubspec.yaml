@@ -11,12 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
   uuid: ^3.0.4
-  rxdart: ^0.24.0
-  xml: ^5.0.0
+  rxdart: ^0.27.1
+  xml: ^5.1.2
   dio: ^4.0.0
-  collection: ^1.14.11
-  nonce: ^0.1.0
-  crypto: ^3.0.0
+  collection: ^1.15.0
+  nonce: ^1.2.0
+  crypto: ^3.0.1
 
 dev_dependencies:
   flutter_test:
