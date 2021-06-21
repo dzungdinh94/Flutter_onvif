@@ -8,10 +8,10 @@ import 'package:onvif/Repository/Utils.dart';
 void readResponse(String probes){
     final Map<String,String> aProbeMatch = readProbeMatches(probes);
     if (aProbeMatch.isNotEmpty){
-      List<String> types = aProbeMatch['Types'].split(" ");
-      List<String> scopes = aProbeMatch['Scopes'].split(" ");
+      List<String> types = aProbeMatch['Types']!.split(" ");
+      List<String> scopes = aProbeMatch['Scopes']!.split(" ");
       removeFreeScopes(scopes);
-      List<String> xAddrs = aProbeMatch['XAddrs'].split(" ");
+      List<String> xAddrs = aProbeMatch['XAddrs']!.split(" ");
       ProbeMatch  probeMatchObject = ProbeMatch(
       types, scopes , xAddrs,
       aProbeMatch['MetadataVersion'], 

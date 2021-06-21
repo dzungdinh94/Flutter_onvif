@@ -7,9 +7,9 @@ ProbeMatchBloc probeMatchData = ProbeMatchBloc();
 OnvifDeviceBLOC deviceBLOC = OnvifDeviceBLOC();
 
 class ProbeBloc {
-  String _probe ;
-  BehaviorSubject <String> _subject = BehaviorSubject();
-  Stream <String> get probes => _subject.stream;
+  String? _probe ;
+  BehaviorSubject <String?> _subject = BehaviorSubject();
+  Stream <String?> get probes => _subject.stream;
   ProbeBloc(){
     _subject.add(_probe);
     _subject.sink.add("");
@@ -20,9 +20,9 @@ class ProbeBloc {
 }
 
 class ProbeMatchBloc {
-  ProbeMatch _probeMatchBloc ;
-  BehaviorSubject <ProbeMatch> _subject = BehaviorSubject();
-  Stream <ProbeMatch> get probeMatches => _subject.stream;
+  ProbeMatch? _probeMatchBloc ;
+  BehaviorSubject <ProbeMatch?> _subject = BehaviorSubject();
+  Stream <ProbeMatch?> get probeMatches => _subject.stream;
   ProbeMatchBloc(){
     _subject.add(_probeMatchBloc);
     _subject.sink.add(ProbeMatch([""],[""],[""],"",""));
@@ -34,9 +34,9 @@ class ProbeMatchBloc {
 }
 
 class OnvifDeviceBLOC{
-  OnvifDevice _device;
-  BehaviorSubject <OnvifDevice> _subject = BehaviorSubject();
-  Stream<OnvifDevice> get devices => _subject.stream;
+  OnvifDevice? _device;
+  BehaviorSubject <OnvifDevice?> _subject = BehaviorSubject();
+  Stream<OnvifDevice?> get devices => _subject.stream;
   OnvifDeviceBLOC(){
     _subject.add(_device);
     _subject.sink.add(OnvifDevice());

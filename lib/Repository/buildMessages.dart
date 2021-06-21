@@ -1,7 +1,7 @@
 import 'package:onvif/Model/OnvifDevice.dart';
 import 'package:onvif/Model/WsUsernameToken.dart';
 
-String buildProbeMessage(String messageID ){
+String buildProbeMessage(String? messageID ){
     return '<?xml version="1.0" encoding="UTF-8"?>\r\n'+
     '<e:Envelope xmlns:e="http://www.w3.org/2003/05/soap-envelope"\r\n'+
     'xmlns:w="http://schemas.xmlsoap.org/ws/2004/08/addressing"\r\n' +
@@ -68,7 +68,7 @@ String buildProbeMessage(String messageID ){
           setAuthenticationInformation(device , username , password) +
           '<SOAP-ENV:Body><trt:GetProfiles/></SOAP-ENV:Body></SOAP-ENV:Envelope>';
    }
-   String buildGetStreamUriMessage(OnvifDevice device , String username , String password , Map<String,String> streamSetup,String targetProfileToken ){
+   String buildGetStreamUriMessage(OnvifDevice device , String username , String password , Map<String,String?> streamSetup,String targetProfileToken ){
      return '<?xml version="1.0" encoding="utf-8"?>'+
           '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"'+
           'xmlns:trt="http://www.onvif.org/ver10/media/wsdl" xmlns:tt="http://www.onvif.org/ver10/schema">'+

@@ -9,16 +9,16 @@ String removePranteces(String s){
   s= s.replaceAll( "(", "");
   return s.replaceAll(")", "");
 }
-void removeFreeProbeMatches(List<ProbeMatch> list){
-   list.removeWhere((item)=>item.address == "");
+void removeFreeProbeMatches(List<ProbeMatch?> list){
+   list.removeWhere((item)=>item!.address == "");
 }
 void removeFreeScopes(List<String> list){
   list.removeWhere((item)=> item =="");
 }
-bool inlist(List<ProbeMatch> probeMatchlist,ProbeMatch probeMatch){
+bool inlist(List<ProbeMatch?> probeMatchlist,ProbeMatch? probeMatch){
   Function eq = const ListEquality().equals;
-  for(ProbeMatch _probeMatch in probeMatchlist)
-  if (eq(_probeMatch.xAddrs , probeMatch.xAddrs))
+  for(ProbeMatch? _probeMatch in probeMatchlist)
+  if (eq(_probeMatch!.xAddrs , probeMatch!.xAddrs))
   return true;
   return false;
 }

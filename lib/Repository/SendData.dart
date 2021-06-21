@@ -10,7 +10,7 @@ sendMulticast(String ip , int port ,String message , Function (String)onDone){
       s.send(message.codeUnits, multicastAddress, multicastPort);
      
       s.listen((RawSocketEvent e){
-        Datagram d = s.receive();
+        Datagram? d = s.receive();
         if (d == null) return  ;
         String messageRecived = new String.fromCharCodes(d.data);
          onDone(messageRecived.trim()); 

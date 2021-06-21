@@ -6,8 +6,8 @@ import 'OnvifDevice.dart';
 
 class WsUsernameToken{
    String username ;
-   String created ;
-   String nonce;
+   String? created ;
+   String? nonce;
    String password;
    OnvifDevice device;
    WsUsernameToken(this.username , this.password, this.device){
