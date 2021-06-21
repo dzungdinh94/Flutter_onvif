@@ -13,7 +13,7 @@ dependencies:
   uuid: ^2.0.4
   rxdart: ^0.24.0
   xml: ^5.0.0
-  dio: ^3.0.9
+  dio: ^4.0.0
   collection: ^1.14.11
   nonce: ^0.1.0
   crypto: ^2.1.3
